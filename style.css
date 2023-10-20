@@ -1,0 +1,242 @@
+.masonry {
+    column-count: 5; 
+    column-gap: 1rem; /* Adjust the gap between columns as needed */
+    margin: 1rem .5rem;
+}
+
+.masonry-item {
+    break-inside: avoid; /* Prevent items from breaking across columns */
+    border: 1px solid #ccc;
+    margin: 1rem .5rem;   
+    border-radius: 20px;
+    position: relative;
+}
+
+.image-container {
+    position: relative; /* Make sure .image-overlay is positioned relative to this container */
+    overflow: hidden; /* Hide the overlay initially */
+    border-radius: 20px;
+}
+
+.image-container .main-img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.image-shadow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Adjust the color and opacity as needed */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.5s; /* Add a smooth transition effect */
+    border-radius: 20px;
+}
+
+.image-shape-overlay {
+    position: absolute;
+    /* top: 66%;  The top is commented bcoz of the fluctations in the image size and that is also the reason why the bottom is not set in the % but is set in the px format*/ 
+    bottom: -141px;
+    left: 0;
+    width: 100%;
+    height: 300px !important;
+    min-height: 300px;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255), rgb(80, 90, 168)); /* Adjust the color and opacity as needed */
+    transition: opacity 0.5s; /* Add a smooth transition effect */
+    border-radius: 50px;
+    height: 55%;
+    width: 111%;
+    transform: skew(25deg, -11deg);
+}
+
+.student-image-logo {
+    position: absolute;
+    bottom: 128px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255, 0.3);
+    transition: top 2s, height 2s, width 2s; /* Add transitions only to the properties you want to change */
+}
+
+.student-details {
+    position: absolute;
+    /* top: 74%; */
+    bottom: 22px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.student-details p {
+    margin: 0;
+}
+
+.student-details .student-name {
+    font-weight: 600;
+    font-size: large;
+}
+
+.student-details .student-company-details {
+    font-weight: 500;
+}
+
+.star-rating {
+    visibility: hidden;
+    margin-left: 20px;
+    opacity: 0%;
+    position: absolute;
+}
+
+.star-checked {
+    color: rgb(255, 255, 255);
+}
+
+.star-not-checked {
+    color: rgb(111, 111, 111);
+}
+
+.review {
+    visibility: hidden;
+    margin-left: 20px;
+    opacity: 0%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+}
+
+iframe {
+    position: relative;
+    display: none;
+    height: 360px;
+    object-fit: contain;
+    opacity: 0%;
+    width: 100%;
+    transition: opacity 5s;
+    /* margin: 0 auto; */
+}
+
+
+/* .masonry-item:hover iframe + .main-img {
+    display: none;
+} */
+
+/* Initially, set iframe to display: none; if needed */
+/* .image-container iframe {
+    display: none;
+} */
+
+/*  <--------------------------------------Hover Changes-------------------------------------->  */
+
+.masonry-item:hover .image-shadow-overlay {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.masonry-item:hover .image-shape-overlay {
+    transform: translateY(100%);
+    transition: transform 2s;
+}
+
+.masonry-item:hover .student-details {
+    transform: translateY(150%);
+    transition: transform 1s;
+}
+
+.masonry-item:hover .student-image-logo {
+    /* top: 20px; */
+    bottom: calc(100% - 69px);
+    transition: bottom 2s;
+    height: 50px;
+    width: 50px;
+}
+
+.masonry-item:hover .star-rating {
+    visibility: visible;
+    position: absolute;
+    top: 75px;
+    opacity: 100%;
+    transition: opacity 5s;
+}
+
+.masonry-item:hover .review {
+    visibility: visible;
+    position: absolute;
+    top: 99px;
+    opacity: 100%;
+    transition: opacity 5s;
+}
+
+/*  <--------------------------------------Meida Query Changes-------------------------------------->  */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default Styles */
+.masonry {
+    column-count: 2;
+}
+
+/* Mobile: <= 480px */
+@media only screen and (max-width:480px) {
+    .masonry {
+        column-count: 1;
+    }
+    /* .masonry-item {
+        border: 1px solid #ccc;
+        margin: 1rem .5rem;
+    } */
+    .masonry-item {
+        border: 1px solid #ccc;
+        margin: 1rem 1rem;
+    }
+    .student-image-logo{
+        bottom: 118px;
+    }
+}
+
+/* Tablet: 481px to 1020px */
+@media only screen and (min-width:481px) and (max-width:720px) {
+    .masonry {
+        column-count: 2;
+    }
+    .student-image-logo{
+        bottom: 118px;
+    }
+}
+
+@media only screen and (min-width:721px) and (max-width:1020px) {
+    .masonry {
+        column-count: 1;
+    }
+}
+
+/* @media only screen and (max-width: 720px) {
+    .masonry {
+        column-count: 1
+    }
+} */
+
+/* Large Tablet: 1021px to 1439px */
+@media only screen and (min-width:1021px) and (max-width:1439px) {
+    .masonry {
+        column-count: 4;
+    }
+}
+
+/* Desktop: >= 1440px */
+/* @media only screen and (min-width:1440px) {
+    .masonry {
+        column-count: 5;
+    }
+} */

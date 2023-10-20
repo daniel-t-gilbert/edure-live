@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+	<link rel="stylesheet" href="masonary_layout.css">
+    <!-- <link rel="stylesheet" href="masonary_layout.css" /> -->
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #ffffff;
+			box-sizing: border-box;
+		}
+		.container{
+			width: 1400px;
+			margin: 20px auto;
+			columns: 4;
+			column-gap: 40px; 
+			/* background: rgba( 255, 255, 255, 0.2 );
+			box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+			backdrop-filter: blur( 4px );
+			-webkit-backdrop-filter: blur( 4px );
+			border-radius: 10px; */
+		}
+		.container .box{
+			width: 100%;
+			break-inside: avoid;
+			margin-bottom: 35px;
+			transition: all 0.3s ease;
+		}
+		.card:hover .user-description-bk {
+            transform: translateY(100%);
+        }
+		.card:hover .user-logo {
+            transform: translateY(100%);
+        }
+		.box:hover .user-info {
+            transform: translateY(100%);
+        }
+
+		.container .box img {
+			max-width: 100%;
+			border-radius: 15px;
+		}
+		.container .box iframe {
+			max-width: 100%;
+			min-width: 100%;
+			border-radius: 15px;
+		}
+		.box {
+			color: white;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+		@media (max-width: 1200px) {
+			.container{
+				width: calc(100% - 40px);
+				columns: 3;
+			}
+		}
+		@media (max-width: 768px) {
+			.container{
+				columns: 2;
+			}
+		}
+		@media (max-width: 480px) {
+			.container{
+				columns: 1;
+			}
+		}
+		
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<div class="box">
+			<iframe
+				height="560"
+				src="https://youtube.com/embed/zIUudEcXNOY?si=KvKE_4UEPxVVpuO_"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture;"
+				allowfullscreen
+			></iframe>
+			<h1>
+				Daniel T Gilbert
+			</h1>
+			<h2>MERN Stack</h2>
+			<h3>Zartek Technologies</h3>
+			<h4>Salary: 10 LPA</h4>
+		</div>
+		<div class="box">
+			<img src="https://static.bershka.net/4/photos2/2018/I/0/2/p/6217/310/800/6217310800_2_2_4.jpg?t=15422859082271" alt="">
+			<h1>
+				Daniel T Gilbert
+			</h1>
+			<h2>MERN Stack</h2>
+			<h3>Zartek Technologies</h3>
+			<h4>Salary: 10 LPA</h4>
+		</div>
+		<div class="box">
+			<img src="https://static.bershka.net/4/photos2/2018/I/0/2/p/6217/310/800/6217310800_2_2_4.jpg?t=15422859082271" alt="">
+			<h1>
+				Daniel T Gilbert
+			</h1>
+			<h2>MERN Stack</h2>
+			<h3>Zartek Technologies</h3>
+			<h4>Salary: 10 LPA</h4>
+		</div>
+		<div class="box">
+			<iframe
+				height="560"
+				src="https://youtube.com/embed/zIUudEcXNOY?si=KvKE_4UEPxVVpuO_"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture;"
+				allowfullscreen
+			></iframe>
+			<h1>
+				Daniel T Gilbert
+			</h1>
+			<h2>MERN Stack</h2>
+			<h3>Zartek Technologies</h3>
+			<h4>Salary: 10 LPA</h4>
+		</div>
+		<div class="box">
+			<iframe
+				height="560"
+				src="https://youtube.com/embed/zIUudEcXNOY?si=KvKE_4UEPxVVpuO_"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture;"
+				allowfullscreen
+			></iframe>
+			<h1>
+				Daniel T Gilbert
+			</h1>
+			<h2>MERN Stack</h2>
+			<h3>Zartek Technologies</h3>
+			<h4>Salary: 10 LPA</h4>
+		</div>
+		<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
+		<div class="first user box">
+			<!-- <img class="user-profile-img" src="https://static.bershka.net/4/photos2/2018/I/0/2/p/6217/310/800/6217310800_2_2_4.jpg?t=15422859082271" alt=""> -->
+			<iframe
+				height="560"
+				src="https://youtube.com/embed/zIUudEcXNOY?si=KvKE_4UEPxVVpuO_&rel=0"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture;"
+				allowfullscreen
+			></iframe>
+			<div class="user-description-bk"></div>
+			<div class="user-logo">
+				<img class="user-logo-img" src="https://static.bershka.net/4/photos2/2018/I/0/2/p/6217/310/800/6217310800_2_2_4.jpg?t=15422859082271" alt="">
+			</div>
+			<div class="user-info">
+				<p>
+					<span class="name">Daniel T Gilbert</span>
+					<br>
+					<span class="course">MERN Stack</span>
+					<br>
+					<span class="company">Dexpro Innovations</span>
+					<br>
+					<span class="salary">Salary :  10 LPA</span>
+				</p>
+				
+				<!-- <p>MERN Stack</p> -->
+			</div>
+			<!-- <div class="user-date">
+				<p>Dexpro Innovations</p>
+				<p>Salary : 5 LPA</p>
+			</div>
+			<div class="user-btn">
+				<a href="#">Learn More</a>
+			</div> -->
+		</div>
+		<div class="first user box">
+			<img class="user-profile-img" src="https://static.bershka.net/4/photos2/2018/I/0/2/p/6217/310/800/6217310800_2_2_4.jpg?t=15422859082271" alt="">
+			<!-- <iframe
+				height="560"
+				src="https://youtube.com/embed/zIUudEcXNOY?si=KvKE_4UEPxVVpuO_&rel=0"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture;"
+				allowfullscreen
+			></iframe> -->
+			<div class="user-description-bk"></div>
+			<div class="user-logo">
+				<img class="user-logo-img" src="https://static.bershka.net/4/photos2/2018/I/0/2/p/6217/310/800/6217310800_2_2_4.jpg?t=15422859082271" alt="">
+			</div>
+			<div class="user-info">
+				<p>
+					<span class="name">Daniel T Gilbert</span>
+					<br>
+					<span class="course">MERN Stack</span>
+					<br>
+					<span class="company">Dexpro Innovations</span>
+					<br>
+					<span class="salary">Salary :  10 LPA</span>
+				</p>
+				
+				<!-- <p>MERN Stack</p> -->
+			</div>
+			<!-- <div class="user-date">
+				<p>Dexpro Innovations</p>
+				<p>Salary : 5 LPA</p>
+			</div>
+			<div class="user-btn">
+				<a href="#">Learn More</a>
+			</div> -->
+		</div>
+
+<!-- <div class="second user">
+    <img class="user-profile-img" src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
+    <div class="user-description-bk"></div>
+    <div class="user-logo">
+        <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg" alt="">
+    </div>
+    <div class="user-description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="user-date">
+        <p>20.02.2019</p>
+    </div>
+    <div class="user-btn">
+        <a href="#">Learn More</a>
+    </div>
+</div> -->
+		
+
+
+
+	<!-- <script>
+        // JavaScript to dynamically adjust card heights
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.style.gridRowEnd = `span ${Math.ceil(card.offsetHeight)}`;
+		console.log(`${card} card length = ${card.offsetHeight}px`)
+
+        });
+    </script> -->
+
+  </body>
+</html>

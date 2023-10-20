@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.user {
+  display: inline-block;
+  position: relative;
+  /* width: 25%;
+  min-width: 25%; */
+  height: 560px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  transition: transform 0.8s;
+}
+
+.user-profile-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.user:hover .user-profile-img{
+  z-index: 0;
+}
+
+.user-overlay {
+  z-index: -1;
+  opacity: 0%;
+}
+
+.user:hover .user-overlay{
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  height: 100%;
+  width: 100%;
+  transform: skew(0deg, 0deg);
+  z-index: 1;
+  opacity: 100%;
+  transition: opacity 2s;
+}
+
+.user-description-bk {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255), rgb(80, 90, 168, 0.9));
+  border-radius: 70px;
+  position: absolute;
+  top: 61%;
+  left: -10px;
+  height: 55%;
+  width: 111%;
+  transform: skew(25deg, -11deg);
+}
+
+.user:hover .user-description-bk {
+  transform: translateY(100%);
+  transition: transform 0.8s;
+}
+
+.user-logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 33%;
+  left: 33px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.iframe:hover .user-logo {
+  transform: translateY(333%);
+  left: 20px;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.9s;
+}
+
+.image:hover .user-logo {
+  transform: translateY(-600%);
+  left: 20px;
+  height: 50px;
+  width: 50px;
+  transition: transform 1.5s;
+}
+
+.user:hover .iframe .user-logo {
+  transform: translateY(333%);
+  left: 20px;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.9s;
+}
+
+.user-logo-img{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.iframe:hover .user-profile-img{
+  z-index: -1;
+  opacity: 0%;
+  transition: opacity 1s;
+}
+
+.user-logo img {
+  height: 100%;
+}
+
+.star-rating {
+  visibility: hidden;
+  margin-left: 20px;
+  opacity: 0%;
+}
+
+.image:hover .star-rating {
+  visibility: visible;
+  position: absolute;
+  top: 85px;
+  opacity: 100%;
+  transition: opacity 6s;
+}
+
+.star-checked {
+  color: rgb(255, 255, 255);
+}
+
+.star-not-checked {
+  color: rgb(77, 77, 77);
+}
+
+.review {
+  visibility: hidden;
+  margin-left: 20px;
+  opacity: 0%;
+  color: rgb(255, 255, 255);
+}
+
+.image:hover .review {
+  visibility: visible;
+  position: absolute;
+  top: 111px;
+  opacity: 100%;
+  transition: opacity 6s;
+}
+
+.user-info {
+  position: absolute;
+  color: #fff;
+  left: 20px;
+  top: 70%;
+}
+
+.user:hover .user-info {
+  transform: translateY(150%);
+  transition: transform 0.8s;
+}
+
+.user-info .name {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.user-info .course {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.user-info .company {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.user-info .salary {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* .user-date {
+  position: absolute;
+  color: #fff;
+  left: 30px;
+  bottom: 10%;
+} */
+
+/* Media queries for the width of the cards => .user  */
+
+@media screen and (min-width: 1300px) {
+  .user {
+    width: 300px;
+  }
+}
+
+.col-12 .user {
+  width: 300px;
+}
+
